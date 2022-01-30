@@ -25,7 +25,7 @@ while true; do
             bash foldercopier.sh
             ;;
             3)
-            bash setPassword.sh
+            bash set_password_sterilised.sh
             ;;
             4)
             bash calculator.sh

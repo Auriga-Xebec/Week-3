@@ -4,4 +4,4 @@ echo "Enter a download source"
 read download_source
 echo "Enter download destination"
 read download_destination
-wget -P "$download_destination" "$download_source" 
+wget "$download_source" "$download_destination"
