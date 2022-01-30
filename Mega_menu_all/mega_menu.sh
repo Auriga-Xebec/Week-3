@@ -1,18 +1,21 @@
 #!/bin/bash
+### 202201301720 --> added blue colour to the menu
+### 202201301728 --> added newline after the menu
+###              --> added red to access denied
 
 bash new_password_check.sh
 con=$?
 
 while true; do
     if [ "$con" = 0 ]; then
-        echo "(1) Folder Creator
+        echo -e "\033[34m(1) Folder Creator
 (2) Copy folder
 (3) Set Password
 (4) Calculator
 (5) Create week folders
 (6) Check file names
 (7) Download a file
-(8) Exit" 
+(8) Exit\n\e[0m" 
     
         read selection
         
@@ -48,7 +51,7 @@ while true; do
         esac
         
     else 
-        echo "Access denied"; break
+        echo -e "\n\033[31mAccess denied\e[0m\n"; break
 
     fi
 done
